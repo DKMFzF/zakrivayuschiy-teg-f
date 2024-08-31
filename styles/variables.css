@@ -1,5 +1,8 @@
 :root {
     /* Шрифт */
-    --main-font: 'Inter', sans-serif;
+    --main-font: 'Inter-Variable', sans-serif;
+    --main-wght-bold: 700;
+    --main-wght-normal: 400; 
+
     --accent-font: 'PressStart2P', monospace;
 }
