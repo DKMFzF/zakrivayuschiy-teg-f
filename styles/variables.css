@@ -2,7 +2,11 @@
     /* Шрифт */
     --main-font: 'Inter-Variable', sans-serif;
     --main-wght-bold: 700;
-    --main-wght-normal: 400; 
+    --main-wght-normal: 400;
 
     --accent-font: 'PressStart2P', monospace;
+
+    /* Цвета */
+    --background-color: #fff;
+    --accent-color: #000;
 }
