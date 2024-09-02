@@ -19,4 +19,5 @@
   font-variation-settings: 'wght' var(--main-wght-normal);
   background-color: var(--background-color);
   color: var(--accent-color);
+  background-image: var(--background-image);
 }
