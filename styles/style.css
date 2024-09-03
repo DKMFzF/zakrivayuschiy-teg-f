@@ -12,6 +12,7 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+/* Общие стили для контейнеров */
 .page {
   display: flex;
   flex-direction: column;
@@ -23,15 +24,18 @@
   background-color: var(--background-color);
   color: var(--accent-color);
   background-image: var(--background-image);
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
+}
+
+.container {
+  margin-block-start: 7%;
+  inline-size: 48.6%;
+  min-inline-size: 375px;
 }
 
 /* Header */
 .header {
-  margin-block-start: 7%;
-  inline-size: 48.6%;
-  min-inline-size: 375px;
   border: 2px solid var(--border-container-color, black);
   display: flex;
   flex-direction: column;
@@ -88,4 +92,31 @@
 
 .theme-menu__item:last-child {
   padding-block-end: 0;
+}
+
+/* Общие стили для карточек  */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 2px solid var(--border-container-color, black);
+  font-family: var(--main-font), sans-serif;
+  background-color: var(--background-container-color, white);
+}
+
+.card__title {
+  padding-block-start: 4px;
+  padding-inline-start: 10px;
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--main-wght-bold, 700);
+}
+
+.card__paragraph {
+  padding-block-start: 21px;
+  padding-inline: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--main-wght-normal, 400);
 }
