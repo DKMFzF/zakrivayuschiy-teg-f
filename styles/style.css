@@ -32,12 +32,12 @@
   margin-block-start: 7%;
   inline-size: 48.6%;
   min-inline-size: 375px;
-  border: 2px solid black;
+  border: 2px solid var(--border-container-color, black);
   display: flex;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--background-container-color, white);
   font-family: var(--accent-font), monospace;
   text-transform: uppercase;
 
@@ -70,6 +70,14 @@
   text-transform: uppercase;
   background-color: transparent;
   border: none;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
 }
 
 .theme-menu__button:disabled::before {
