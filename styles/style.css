@@ -13,6 +13,9 @@
 */
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
@@ -22,4 +25,59 @@
   background-image: var(--background-image);
   background-attachment: fixed;
   background-size: cover;
+}
+
+/* Header */
+.header {
+  margin-block-start: 7%;
+  inline-size: 48.6%;
+  min-inline-size: 375px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  background-color: white;
+  font-family: var(--accent-font), monospace;
+  text-transform: uppercase;
+
+}
+
+.header__title {
+  margin-block-start: 19.5%;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header__sub-title {
+  margin-block-start: 3%;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+/* Кнопки переключения тем */
+.header__theme-menu {
+  margin-block-start: 3.4%;
+  margin-block-end: 3.5%;
+  font-size: 14px;
+}
+
+.theme-menu__item {
+  padding-inline-start: 18px; 
+  padding-block-end: 11px;
+}
+
+.theme-menu__button {
+  position: relative;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  inset-inline-start: -15px;
+}
+
+.theme-menu__item:last-child {
+  padding-block-end: 0;
 }
