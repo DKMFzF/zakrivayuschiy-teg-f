@@ -29,7 +29,7 @@
 }
 
 .container {
-  margin-block-start: 7%;
+  margin-block-start: 6.905%;
   inline-size: 48.6%;
   min-inline-size: 375px;
 }
@@ -48,7 +48,7 @@
 }
 
 .header__title {
-  margin-block-start: 19.5%;
+  margin-block-start: 19.48%;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
@@ -59,14 +59,14 @@
 
 /* Кнопки переключения тем */
 .header__theme-menu {
-  margin-block-start: 3.4%;
+  margin-block-start: 3.3%;
   margin-block-end: 3.5%;
   font-size: 14px;
 }
 
 .theme-menu__item {
   padding-inline-start: 18px; 
-  padding-block-end: 11px;
+  padding-block-end: 12px;
 }
 
 .theme-menu__button {
@@ -111,12 +111,17 @@
   font-variation-settings: 'wght' var(--main-wght-bold, 700);
 }
 
+.card__image {
+  border-top: 2px solid var(--border-container-color, black);
+  border-bottom: 2px solid var(--border-container-color, black);
+}
+
 .card__paragraph {
-  padding-block-start: 21px;
+  padding-block-start: 20px;
   padding-inline: 25px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 27px;
   font-size: 18px;
   font-variation-settings: 'wght' var(--main-wght-normal, 400);
 }
