@@ -155,3 +155,30 @@
   border: none;
   background-color: transparent;
 }
+
+@media (width <= 375px) {
+  .container {
+    margin-block-start: 27%;
+    inline-size: 100vw;
+    min-inline-size: 120px;
+  }
+
+  .header__title {
+    margin-block-start: 32%;
+    font-size: clamp(1rem, 0.0294rem + 12.9412vw, 3.0625rem);
+  }
+
+  .header__sub-title {
+    margin-block-start: 5%;
+    font-size: clamp(0.625rem, 0.5074rem + 1.5686vw, 0.875rem);
+  }
+
+  .header__theme-menu {
+    margin-block-start: 7%;
+    margin-block-end: 6%;
+  }
+
+  .theme-menu__item {
+    padding-inline-start: 22px;
+  }
+}
