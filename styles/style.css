@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
@@ -123,5 +122,36 @@
   flex-direction: column;
   gap: 27px;
   font-size: 18px;
-  font-variation-settings: 'wght' var(--main-wght-normal, 400);
+}
+
+/* Кнопка лайка */
+.card__container-button {
+  padding-block-start: 19px;
+  padding-block-end: 25px;
+  padding-inline-end: 25px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.card__like-button {
+  padding-block-start: 9px;
+  padding-block-end: 5px;
+  border-style: solid;
+  border-color: var(--border-container-color, black);
+  inline-size: 130px;
+  background-color: transparent;
+}
+
+.button__text {
+  font-family: var(--accent-font), monospace;
+  font-size: 14px;
+}
+
+/* svg иконка лайка */
+.card__icon-button {
+  padding-block-start: 8px;
+  padding-inline-end: 12px;
+  border: none;
+  background-color: transparent;
 }
