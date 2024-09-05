@@ -116,11 +116,12 @@
 }
 
 .card__paragraph {
-  padding-block-start: 20px;
+  padding-block-start: 17px;
   padding-inline: 25px;
   display: flex;
+  line-height: 22px;
   flex-direction: column;
-  gap: 27px;
+  gap: 25px;
   font-size: 18px;
 }
 
@@ -169,16 +170,30 @@
   }
 
   .header__sub-title {
-    margin-block-start: 5%;
+    margin-block-start: 5.6%;
     font-size: clamp(0.625rem, 0.5074rem + 1.5686vw, 0.875rem);
   }
 
   .header__theme-menu {
-    margin-block-start: 7%;
-    margin-block-end: 6%;
+    margin-block-start: 6.3%;
+    margin-block-end: 6.3%;
   }
 
   .theme-menu__item {
     padding-inline-start: 22px;
+  }
+  
+  .card {
+    gap: 4px;
+  }
+  .card__paragraph {
+    padding-block-start: 18px;
+    line-height: 21px;
+    gap: 27px;
+  }
+
+  .card__container-button {
+    padding-block-start: 22px;
+    padding-block-end: 25px;
   }
 }
