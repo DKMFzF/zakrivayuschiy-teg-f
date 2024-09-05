@@ -187,6 +187,9 @@
 }
 
 .card__like-button {
+  position: relative;
+  inline-size: 130px;
+  block-size: 38px;
   padding-block-start: 8px;
   padding-block-end: 5px;
   border-style: solid;
@@ -196,8 +199,43 @@
 }
 
 .button__text {
+  z-index: 1;
+  position: absolute;
+  inline-size: 84px;
+  inset-inline-end: 21px;
+  inset-block-end: 11px;
+  color: white;
   font-family: var(--accent-font), monospace;
   font-size: 14px;
+  mix-blend-mode: difference;
+}
+
+.card__like-button:focus {
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color, black);
+}
+
+.card__like-button::after {
+  content: '';
+  position: absolute;
+  display: block;
+  inset-block-start: 0px;
+  inset-inline-start: 0px;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--accent-color, black);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__like-button:hover::after {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
 }
 
 /* svg кнопка сердечка */
@@ -260,7 +298,11 @@
   }
 
   .card__container-button {
-    padding-block-start: 22px;
+    padding-block-start: 20px;
     padding-block-end: 25px;
+  }
+
+  .button__text {
+    inset-block-end: 8px;
   }
 }
