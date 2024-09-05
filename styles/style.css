@@ -59,13 +59,13 @@
 /* Кнопки переключения тем */
 .header__theme-menu {
   margin-block-start: 3.5%;
-  margin-block-end: 3.5%;
+  margin-block-end: 3.1%;
   font-size: 14px;
 }
 
 .theme-menu__item {
   padding-inline-start: 18px; 
-  padding-block-end: 12px;
+  padding-block-end: 10px;
 }
 
 .theme-menu__button {
@@ -73,10 +73,32 @@
   text-transform: uppercase;
   background-color: transparent;
   border: none;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  transform: scaleX(0);
+  block-size: 2px;
+  background-color: var(--accent-color, black);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+  transition: transform 0.3s;
 }
 
 .theme-menu__button:disabled {
   opacity: 0.6;
+  pointer-events: none;
 }
 
 .theme-menu__button:hover {
@@ -104,7 +126,7 @@
 }
 
 .card__title {
-  padding-block-start: 4px;
+  padding-block-start: 5px;
   padding-inline-start: 10px;
   font-size: 18px;
   font-variation-settings: 'wght' var(--main-wght-bold, 700);
@@ -193,6 +215,7 @@
     min-inline-size: 120px;
   }
 
+  /* Шапка */
   .header__title {
     margin-block-start: 32%;
     font-size: clamp(1rem, 0.0294rem + 12.9412vw, 3.0625rem);
@@ -205,15 +228,24 @@
 
   .header__theme-menu {
     margin-block-start: 6.3%;
-    margin-block-end: 6.3%;
+    margin-block-end: 5.7%;
   }
 
   .theme-menu__item {
-    padding-inline-start: 22px;
+    padding-inline-start: 21px;
+  }
+
+  .theme-menu__button:disabled::before {
+    inset-inline-end: 95px;
   }
   
+  /* Карточка */
   .card {
     gap: 4px;
+  }
+
+  .card__title {
+    padding-inline-end: 4px;
   }
 
   .card__image-label {
