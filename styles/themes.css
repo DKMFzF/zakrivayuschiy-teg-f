@@ -7,6 +7,7 @@
     --background-color: #fff;
     --accent-color: #000;
     --border-container-color: #000000;
+    --card-text-stroke-color: #ffffff; 
     --background-container-color: #ffffff;
 
     /* Фон */
@@ -39,6 +40,7 @@
     --background-color: #000;
     --accent-color: #00cc14;
     --border-container-color: #00cc14;
+    --card-text-stroke-color: #000000; 
     --background-container-color: #000000;
 
     /* Фон */
@@ -73,6 +75,7 @@
         --background-color: #000;
         --accent-color: #00cc14;
         --border-container-color: #00cc14;
+        --card-text-stroke-color: #000000; 
         --background-container-color: #000000;
 
         /* Фон */

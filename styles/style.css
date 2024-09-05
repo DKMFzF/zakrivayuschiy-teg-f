@@ -110,13 +110,42 @@
   font-variation-settings: 'wght' var(--main-wght-bold, 700);
 }
 
+.card__image-container {
+  position: relative;
+}
+
+.card__image-label {
+  position: absolute;
+  inset-block-start: 27px;
+  inset-inline-end: 25px;
+  font-family: var(--accent-font), monospace;
+  text-transform: uppercase;
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+  text-shadow:
+    -0.5px 0 var(--card-text-stroke-color, white), 
+    0 0.5px var(--card-text-stroke-color, white), 
+    0.5px 0 var(--card-text-stroke-color, white), 
+    0 -0.5px var(--card-text-stroke-color, white);
+  opacity: 50%;
+}
+
+@supports((text-stroke: 0.5px #ffffff) or (-webkit-text-stroke: 0.5px #ffffff)) {
+  .card__image-label {
+    -webkit-text-stroke: 0.5px var(--card-text-stroke-color, white);
+    text-stroke: 0.5px var(--card-text-stroke-color, white);
+    text-shadow: none;
+  }
+}
+
 .card__image {
+  inline-size: 100%;
   border-top: 2px solid var(--border-container-color, black);
   border-bottom: 2px solid var(--border-container-color, black);
 }
 
 .card__paragraph {
-  padding-block-start: 17px;
+  padding-block-start: 14px;
   padding-inline: 25px;
   display: flex;
   line-height: 22px;
@@ -136,7 +165,7 @@
 }
 
 .card__like-button {
-  padding-block-start: 9px;
+  padding-block-start: 8px;
   padding-block-end: 5px;
   border-style: solid;
   border-color: var(--border-container-color, black);
@@ -149,7 +178,7 @@
   font-size: 14px;
 }
 
-/* svg иконка лайка */
+/* svg кнопка сердечка */
 .card__icon-button {
   padding-block-start: 8px;
   padding-inline-end: 12px;
@@ -186,8 +215,14 @@
   .card {
     gap: 4px;
   }
+
+  .card__image-label {
+    inset-block-start: 26px;
+    inset-inline-end: 11px;
+  }
+
   .card__paragraph {
-    padding-block-start: 21px;
+    padding-block-start: 18px;
     line-height: 21px;
     gap: 27px;
   }
