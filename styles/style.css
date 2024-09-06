@@ -1,16 +1,3 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-*/
-
 /* Общие стили для контейнеров */
 .page {
   display: flex;
@@ -31,6 +18,50 @@
   margin-block-start: 6.905%;
   inline-size: 48.6%;
   min-inline-size: 375px;
+}
+
+/* Общие стили для кнопок в main и footer */
+.button {
+  position: relative;
+  border-style: solid;
+  border-color: var(--border-container-color, black);
+}
+
+.button__text {
+  z-index: 1;
+  position: absolute;
+  color: var(--button-inside-color, white);
+  font-family: var(--accent-font), monospace;
+  font-size: 14px;
+  mix-blend-mode: difference;
+}
+
+.button-uikit:focus {
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.button-uikit:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--accent-color, black);
+}
+
+.button-animation::after {
+  content: '';
+  position: absolute;
+  display: block;
+  inset-block-start: 0px;
+  inset-inline-start: 0px;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--accent-color, black);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-animation:hover::after {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
 }
 
 /* Header */
@@ -188,52 +219,15 @@
 }
 
 .card__like-button {
-  position: relative;
   block-size: 38px;
-  border-style: solid;
-  border-color: var(--border-container-color, black);
   inline-size: 130px;
   background-color: transparent;
 }
 
-.button__text {
-  z-index: 1;
-  position: absolute;
+.button__like-text {
   inline-size: 84px;
   inset-inline-end: 21px;
   inset-block-end: 9px;
-  color: white;
-  font-family: var(--accent-font), monospace;
-  font-size: 14px;
-  mix-blend-mode: difference;
-}
-
-.card__like-button:focus {
-  outline: none;
-  transition: box-shadow 0.3s ease;
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--accent-color, black);
-}
-
-.card__like-button::after {
-  content: '';
-  position: absolute;
-  display: block;
-  inset-block-start: 0px;
-  inset-inline-start: 0px;
-  inline-size: 100%;
-  block-size: 100%;
-  background-color: var(--accent-color, black);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-}
-
-.card__like-button:hover::after {
-  transform: scaleX(1);
-  transition: transform 0.5s ease-in-out;
 }
 
 /* svg кнопка сердечка */
@@ -331,6 +325,30 @@
   transition: fill 0.1s linear;
 }
 
+/* Фуууутер */
+.footer__button {
+  margin-block-start: 15%;
+  margin-block-end: 31%;
+  inline-size: 339px;
+  block-size: 55px;
+  background-color: var(--background-container-color, white);
+}
+
+.button__save-text {
+  inline-size: 266px;
+  inset-inline-end: 21px;
+  inset-block-end: 19px;
+}
+
+.floppy {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 14px;
+  inset-inline-start: 19px;
+  inline-size: 21px;
+  mix-blend-mode: difference;
+}
+
 @media (width <= 375px) {
   .container {
     margin-block-start: 27%;
@@ -389,5 +407,22 @@
 
   .button__text {
     inset-block-end: 8px;
+  }
+
+  /* Фуутер */
+  .footer__button {
+    margin-block-start: 16%;
+    inline-size: 310px;
+    block-size: 85px;
+  }
+
+  .button__save-text {
+    inset-block-end: 15px;
+  }
+
+  .floppy {
+    inset-block-start: 16px;
+    inset-inline-start: 139px;
+    inline-size: 28px;
   }
 }

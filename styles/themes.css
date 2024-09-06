@@ -9,6 +9,7 @@
     --border-container-color: #000000;
     --card-text-stroke-color: #ffffff; 
     --background-container-color: #ffffff;
+    --button-inside-color: #ffffff;
 
     /* svg сердце */
     --heart-conture-color: #000000;
@@ -52,6 +53,7 @@
     --heart-conture-color: #00cc14;
     --heart-body-color: #ff0000;
     --heart-body-hover-color: #000000;
+    --button-inside-color: #00cc14;
 
     /* Фон */
     --background-image: 
@@ -87,13 +89,13 @@
         --border-container-color: #00cc14;
         --card-text-stroke-color: #000000; 
         --background-container-color: #000000;
+        --button-inside-color: #00cc14;
 
         /* svg сердце */
         --heart-conture-color: #00cc14;
         --heart-body-color: #ff0000;
         --heart-body-hover-color: #00cc14;
         
-
         /* Фон */
         --background-image: 
         repeating-linear-gradient(
