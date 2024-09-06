@@ -182,7 +182,7 @@
   padding-block-end: 25px;
   padding-inline-end: 25px;
   display: flex;
-  gap: 5px;
+  gap: 6px;
   justify-content: right;
   align-items: center;
 }
@@ -239,8 +239,6 @@
 /* svg кнопка сердечка */
 .card__icon-button {
   padding: 0;
-  padding-block-start: 3px;
-  padding-inline-end: 1px;
   inline-size: 40px;
   block-size: 38px;
   border: 2px solid transparent;
@@ -257,7 +255,39 @@
 }
 
 .like-icon {
-  width: 33px;
+  width: 37px;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+/* hover для сердца */
+.like-icon .core {
+  transition: fill 0.3s;
+}
+
+.like-icon .main-body {
+  transition: fill 0.3s;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-conture-color);
+}
+
+.like-icon:hover .main-body {
+  transition-delay: 0.05s;
+  fill: var(--heart-conture-color);
+}
+
+.like-icon:not(:hover) .main-body {
+  fill: transparent;
+  transition: fill 0.3s;
+}
+
+.like-icon:not(:hover) .core{
+  fill: transparent;
+  transition: fill 0.33s;
 }
 
 @media (width <= 375px) {

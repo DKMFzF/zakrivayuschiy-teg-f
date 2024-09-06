@@ -9,8 +9,14 @@
     /* Цвета */
     --background-color: #fff;
     --accent-color: #000;
-    --card-text-stroke-color: #000000;
+    --border-container-color: #000000;
+    --card-text-stroke-color: #ffffff; 
     --background-container-color: #ffffff;
+
+    /* svg сердце */
+    --heart-conture-color: #000000;
+    --heart-body-color: #ff0000;
+    --heart-body-hover-color: #000000;
 
     /* Фон */
     --background-image: 
