@@ -1,5 +1,6 @@
 /* Общие стили для контейнеров */
 .page {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +26,7 @@
   position: relative;
   border-style: solid;
   border-color: var(--border-container-color, black);
+  background-color: transparent;
 }
 
 .button__text {
@@ -221,7 +223,6 @@
 .card__like-button {
   block-size: 38px;
   inline-size: 130px;
-  background-color: transparent;
 }
 
 .button__like-text {
@@ -349,6 +350,60 @@
   mix-blend-mode: difference;
 }
 
+/* Диалоговое окно */
+dialog[open] {
+  position: absolute;
+  z-index: 1000;
+  display: block;
+  position: fixed;
+  border: 2px solid var(--border-container-color, black);
+  inset-inline: calc((100% /2) - 179px);
+  inset-block: calc((100% / 2) - 102px);
+  background-color: var(--background-container-color, white);
+  color: var(--accent-color, black);
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+.dialog__container-item {
+  margin-inline: 30px;
+  margin-block-start: 30px;
+  display: flex;
+  gap: 20px;
+  line-height: 21px;
+}
+
+.floppy-dialog {
+  display: inline;
+  inset-block-start: 14px;
+  inset-inline-start: 19px;
+  inline-size: 39px;
+  mix-blend-mode: difference;
+}
+
+.button__dialog {
+  inline-size: 292px;
+  block-size: 38px;
+  margin-inline: 30px;
+  margin-block: 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.dialog__title {
+  inline-size: 234px;
+  font-family: var(--accent-font, monospace);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.button__text-dialog {
+  inset-inline-start: 131px;
+  inset-block-start: 10px;
+} 
+
 @media (width <= 375px) {
   .container {
     margin-block-start: 27%;
@@ -424,5 +479,30 @@
     inset-block-start: 16px;
     inset-inline-start: 139px;
     inline-size: 28px;
+  }
+
+  dialog[open] {
+    inline-size: 341px;
+    inset-inline: calc((100% /2) - 171px);
+    inset-block: calc((100% / 2) - 94px);
+    font-size: 14px;
+  }
+
+  .dialog__container-item {
+    margin-inline: 41px;
+  }
+
+  .dialog__title {
+    inline-size: 196px;
+  }
+
+  .button__dialog {
+    inline-size: 257px;
+    margin-inline: 40px;
+  }
+
+  .button__text-dialog {
+    inset-inline-start: 113px;
+    inset-block-start: 11px;
   }
 }

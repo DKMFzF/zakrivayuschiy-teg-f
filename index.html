@@ -86,13 +86,29 @@
     </main>
 
     <footer>
-      <button class="button footer__button button-uikit button-animation">
+      <button class="button footer__button button-uikit button-animation"
+        type="button" onclick="window['dialog-id'].showModal();"
+        aria-controls="save-dialog">
         <svg class="floppy" viewBox="0 0 21 21">
           <use href="./svg/floppy.svg#floppy">
         </svg>
         <span class="button__text button__save-text">Сохранить на память</span>
       </button>
     </footer>
+
+    <dialog id="dialog-id">
+      <div class="dialog__container-item">
+        <svg class="floppy-dialog" viewBox="0 0 21 21">
+          <use href="./svg/floppy.svg#floppy">
+        </svg>
+        <h2 class="dialog__title">вставьте дискету, чтобы продолжить</h2>
+      </div>
+        <button class="button button-uikit button-animation button__dialog"
+        type="button" onclick="window['dialog-id'].close();">
+          <span class="button__text button__text-dialog">ок</span>
+        </button>
+    </dialog>
+    
     <script src="./scripts/like.js"></script>
   </body>
 </html>
