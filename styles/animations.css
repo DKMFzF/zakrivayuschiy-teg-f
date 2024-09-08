@@ -1,3 +1,14 @@
+/* Анимация стрелочки в списке тем сайта */
+@keyframes arrow {
+    from, to {
+        inset-inline-start: -15px;
+    }
+
+    50% {
+        inset-inline-start: -19px;
+    }
+}
+
 /* Анимация сердца */
 @keyframes heart {
     from {

@@ -141,7 +141,8 @@
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
-  inset-inline-start: -15px;
+  /* inset-inline-start: -15px; */
+  animation: arrow 0.5s ease-in-out infinite;
 }
 
 .theme-menu__item:last-child {
