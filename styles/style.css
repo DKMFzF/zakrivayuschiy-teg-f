@@ -338,6 +338,40 @@
   line-height: 21.4px;
 }
 
+/* Стили для надписи над картинкой */
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* Фильтры над картинкой */
+.first-sprint-clean-sheet__card-filter { 
+  filter: grayscale(70%);
+}
+
+.first-sprint-wont-work {
+  filter: brightness(200%);
+}
+
+.second-sprint-chase-ideal {
+  filter: hue-rotate(30deg);
+}
+
+.second-sprint-nearby {
+  filter: contrast(200%);
+}
+
+.third-sprint-bypass-strategies {
+  filter: sepia(100%) hue-rotate(50deg);
+}
+
+.third-sprint-hands-down {
+  filter: blur(5px);
+}
+
+.here-now {
+  filter: saturate(2);
+}
+
 /* Фуууутер */
 .footer__button {
   margin-block-start: 15%;
