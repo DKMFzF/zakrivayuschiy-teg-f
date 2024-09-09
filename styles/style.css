@@ -21,6 +21,10 @@
   min-inline-size: 375px;
 }
 
+.theme-menu__button {
+  cursor: pointer;
+}
+
 /* Общие стили для кнопок в main и footer */
 .button {
   position: relative;
@@ -251,6 +255,7 @@
   padding: 0;
   inline-size: 40px;
   block-size: 38px;
+  cursor: pointer;
   border: 2px solid transparent;
   background-color: transparent;
   transition: border 0.3s ease;
@@ -278,27 +283,25 @@
 }
 
 .like-icon .main-body {
-  transition: fill 0.3s;
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon:hover .core {
-  transition-delay: 0;
   fill: var(--heart-conture-color);
 }
 
 .like-icon:hover .main-body {
-  transition-delay: 0.05s;
   fill: var(--heart-conture-color);
 }
 
 .like-icon:not(:hover) .main-body {
   fill: transparent;
-  transition: fill 0.3s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:not(:hover) .core{
   fill: transparent;
-  transition: fill 0.3s 0.03s;
+  transition: fill 0.3s 0.03s linear;
 }
 
 /* active для сердца */
@@ -324,7 +327,7 @@
 }
 
 .like-icon.is-liked .contour {
-  transition: fill 0.3s 0.05s;
+  transition: fill 0.3s 0.06s;
   fill: var(--heart-body-color, red);
 }
 
