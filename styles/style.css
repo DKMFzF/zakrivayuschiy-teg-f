@@ -383,8 +383,8 @@
 
 /* button-save */
 .button-save {
-  margin-block-start: 15%;
-  margin-block-end: 31%;
+  margin-block-start: 7.3%;
+  margin-block-end: 14%;
   inline-size: 339px;
   block-size: 55px;
   background-color: var(--background-container-color, white);
@@ -409,13 +409,13 @@
 dialog[open] {
   position: absolute;
   z-index: 1000;
-  min-inline-size: 341px;
-  max-inline-size: 341px;
+  min-inline-size: 353px;
+  margin-inline: 8px;
   display: block;
   position: fixed;
   border: 2px solid var(--border-container-color, black);
-  inset-inline: calc((100% /2) - 179px);
-  inset-block: calc((100% / 2) - 102px);
+  inset-inline: calc((100% /2) - 185px);
+  inset-block: calc((100% / 2) - 92px);
   background-color: var(--background-container-color, white);
   color: var(--accent-color, black);
 }
@@ -441,10 +441,10 @@ dialog::backdrop {
 }
 
 .button__dialog {
-  inline-size: 280px;
+  inline-size: 293px;
   block-size: 38px;
   margin-inline-start: 30px;
-  margin-block: 30px;
+  margin-block: 27px;
   text-transform: uppercase;
   font-size: 14px;
 }
@@ -519,18 +519,13 @@ dialog::backdrop {
 
   .button-save {
     margin-block-start: 13%;
+    margin-block-end: 27%;
     inline-size: 310px;
     block-size: 85px;
   }
 
   .button__text {
     inset-block-end: 8px;
-  }
-
-  .footer__button {
-    margin-block-start: 16%;
-    inline-size: 310px;
-    block-size: 85px;
   }
 
   .button__save-text {
@@ -544,7 +539,8 @@ dialog::backdrop {
   }
 
   dialog[open] {
-    inline-size: 341px;
+    margin-inline: 0;
+    min-inline-size: 341px;
     inset-inline: calc((100% /2) - 170px);
     inset-block: calc((100% / 2) - 94px);
     font-size: 14px;
