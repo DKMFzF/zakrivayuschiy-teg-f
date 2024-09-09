@@ -1,13 +1,15 @@
 /* Анимация стрелочки в списке тем сайта */
 @keyframes arrow {
-    from, to {
+    from {
         inset-inline-start: -15px;
     }
 
-    50% {
+    /* Удалил кадр 50% */
+
+    to {
         inset-inline-start: -11px;
     }
-}
+} 
 
 /* Анимация сердца */
 @keyframes heart {

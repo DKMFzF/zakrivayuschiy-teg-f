@@ -145,7 +145,7 @@
   content: "▶";
   position: absolute;
   inset-inline-end: 95px;
-  animation: arrow 0.5s ease-in-out infinite;
+  animation: arrow 0.5s ease-in-out alternate infinite; /* Добавил alternate */
 }
 
 .theme-menu__item:last-child {
@@ -276,30 +276,25 @@
 }
 
 /* hover для сердца */
+/* Вроде "оно" должно быть */
 .like-icon .core {
-  transition: fill 0.3s linear;
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
 }
 
 .like-icon .main-body {
-  transition: fill 0.3s 0.05s linear;
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .core {
+  transition-delay: 0s;
   fill: var(--heart-conture-color);
 }
 
 .like-icon:hover .main-body {
+  transition-delay: 0.05s;
   fill: var(--heart-conture-color);
-}
-
-.like-icon:not(:hover) .main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-
-.like-icon:not(:hover) .core {
-  fill: transparent;
-  transition: fill 0.3s 0.03s linear;
 }
 
 /* active для сердца */
@@ -407,8 +402,8 @@
 }
 
 /* Диалоговое окно */
+/* Убрал лишний position */
 dialog[open] {
-  position: absolute;
   z-index: 1000;
   min-inline-size: 353px;
   margin-inline: 8px;
