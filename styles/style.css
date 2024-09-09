@@ -400,6 +400,7 @@
 dialog[open] {
   position: absolute;
   z-index: 1000;
+  min-inline-size: 341px;
   display: block;
   position: fixed;
   border: 2px solid var(--border-container-color, black);
