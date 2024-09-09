@@ -517,11 +517,16 @@ dialog::backdrop {
     padding-block-end: 25px;
   }
 
+  .button-save {
+    margin-block-start: 13%;
+    inline-size: 310px;
+    block-size: 85px;
+  }
+
   .button__text {
     inset-block-end: 8px;
   }
 
-  /* Фуутер */
   .footer__button {
     margin-block-start: 16%;
     inline-size: 310px;
@@ -540,7 +545,7 @@ dialog::backdrop {
 
   dialog[open] {
     inline-size: 341px;
-    inset-inline: calc((100% /2) - 171px);
+    inset-inline: calc((100% /2) - 170px);
     inset-block: calc((100% / 2) - 94px);
     font-size: 14px;
   }
