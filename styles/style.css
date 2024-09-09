@@ -7,7 +7,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--main-wght-normal);
+  font-variation-settings: "wght" var(--main-wght-normal);
   background-color: var(--background-color);
   color: var(--accent-color);
   background-image: var(--background-image);
@@ -32,9 +32,7 @@
   border-color: var(--border-container-color, black);
   background-color: transparent;
   cursor: pointer;
-  transition: 
-    box-shadow 0.3s ease, 
-    transform 0.5s ease-in-out;
+  transition: box-shadow 0.3s ease, transform 0.5s ease-in-out;
 }
 
 .button__text {
@@ -55,7 +53,7 @@
 }
 
 .button-animation::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   inset-block-start: 0px;
@@ -82,7 +80,6 @@
   background-color: var(--background-container-color, white);
   font-family: var(--accent-font), monospace;
   text-transform: uppercase;
-
 }
 
 .header__title {
@@ -103,7 +100,7 @@
 }
 
 .theme-menu__item {
-  padding-inline-start: 18px; 
+  padding-inline-start: 18px;
   padding-block-end: 10px;
 }
 
@@ -121,7 +118,7 @@
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   display: block;
   transform: scaleX(0);
   block-size: 2px;
@@ -145,7 +142,7 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: '▶';
+  content: "▶";
   position: absolute;
   inset-inline-end: 95px;
   animation: arrow 0.5s ease-in-out infinite;
@@ -181,7 +178,7 @@
   padding-block-start: 5px;
   padding-inline-start: 10px;
   font-size: 18px;
-  font-variation-settings: 'wght' var(--main-wght-bold, 700);
+  font-variation-settings: "wght" var(--main-wght-bold, 700);
 }
 
 .card__image-container {
@@ -196,15 +193,16 @@
   text-transform: uppercase;
   font-size: 14px;
   mix-blend-mode: hard-light;
-  text-shadow:
-    -0.5px 0 var(--card-text-stroke-color, white), 
-    0 0.5px var(--card-text-stroke-color, white), 
-    0.5px 0 var(--card-text-stroke-color, white), 
+  text-shadow: -0.5px 0 var(--card-text-stroke-color, white),
+    0 0.5px var(--card-text-stroke-color, white),
+    0.5px 0 var(--card-text-stroke-color, white),
     0 -0.5px var(--card-text-stroke-color, white);
   opacity: 50%;
 }
 
-@supports((text-stroke: 0.5px #ffffff) or (-webkit-text-stroke: 0.5px #ffffff)) {
+@supports (
+  (text-stroke: 0.5px #ffffff) or (-webkit-text-stroke: 0.5px #ffffff)
+) {
   .card__image-label {
     -webkit-text-stroke: 0.5px var(--card-text-stroke-color, white);
     text-stroke: 0.5px var(--card-text-stroke-color, white);
@@ -299,7 +297,7 @@
   transition: fill 0.3s linear;
 }
 
-.like-icon:not(:hover) .core{
+.like-icon:not(:hover) .core {
   fill: transparent;
   transition: fill 0.3s 0.03s linear;
 }
@@ -356,7 +354,7 @@
 }
 
 /* Фильтры над картинкой */
-.filter-grayscale { 
+.filter-grayscale {
   filter: grayscale(70%);
 }
 
@@ -417,7 +415,7 @@ dialog[open] {
   display: block;
   position: fixed;
   border: 2px solid var(--border-container-color, black);
-  inset-inline: calc((100% /2) - 185px);
+  inset-inline: calc((100% / 2) - 185px);
   inset-block: calc((100% / 2) - 92px);
   background-color: var(--background-container-color, white);
   color: var(--accent-color, black);
@@ -462,7 +460,7 @@ dialog::backdrop {
 .button__text-dialog {
   inset-inline-start: 131px;
   inset-block-start: 10px;
-} 
+}
 
 @media (width <= 375px) {
   .container {
@@ -494,7 +492,7 @@ dialog::backdrop {
   .theme-menu__button:disabled::before {
     inset-inline-end: 95px;
   }
-  
+
   /* Карточка */
   .card {
     gap: 4px;
@@ -544,7 +542,7 @@ dialog::backdrop {
   dialog[open] {
     margin-inline: 0;
     min-inline-size: 341px;
-    inset-inline: calc((100% /2) - 170px);
+    inset-inline: calc((100% / 2) - 170px);
     inset-block: calc((100% / 2) - 94px);
     font-size: 14px;
   }
